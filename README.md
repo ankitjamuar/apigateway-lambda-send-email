@@ -9,11 +9,11 @@ BODY_TEXT = event.get("body_text",None)
 BODY_HTML = event.get("body_html",None) 
 CC        = event.get("cc",None)
 
-Params are self explainatory, RECIPIENT & CC can be a comma seperated list 
+Params are self explanatory, RECIPIENT & CC can be a comma seperated list
 
-Script starts with initializing SES client and then it get all the params from LAMBDA event object. And finally send eail using send_email function.
+The script starts with initializing SES client and then it gets all the params from LAMBDA event object. And finally, send email using the send_email function.
 
-This Lambda function should be linked with API Gateway in order to make it accessable:
+This Lambda function should be linked with API Gateway in order to make it accessible:
 
 # Sample JSON:  
 {"sender": "info@gmail.com","recipient": "xyz@gmail.com,abc@gmail.com","subject":"Multi Email","body_text": "This is textual body","body_html": "This is html Body","cc":"ankit@gmail.com"}
